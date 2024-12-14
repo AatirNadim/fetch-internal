@@ -1,0 +1,96 @@
+{
+  "status": "success",
+  "message": "Request processed successfully",
+  "timestamp": "2024-12-14T12:00:00Z",
+  "data": {
+    "user": {
+      "id": 123456,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "profile": {
+        "age": 30,
+        "gender": "male",
+        "preferences": {
+          "language": "en",
+          "notifications": {
+            "email": true,
+            "sms": false,
+            "push": true
+          }
+        }
+      },
+      "history": [
+        {
+          "action": "login",
+          "timestamp": "2024-12-13T15:45:00Z",
+          "ip_address": "192.168.1.1"
+        },
+        {
+          "action": "update_profile",
+          "timestamp": "2024-12-13T16:00:00Z",
+          "details": {
+            "changed_fields": ["email", "phone_number"]
+          }
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 101,
+        "name": "Laptop",
+        "category": "electronics",
+        "price": 1200.99,
+        "tags": ["technology", "portable"],
+        "stock": {
+          "available": 50,
+          "sold": 200
+        }
+      },
+      {
+        "id": 102,
+        "name": "Wireless Headphones",
+        "category": "accessories",
+        "price": 199.99,
+        "tags": ["audio", "wireless"],
+        "stock": {
+          "available": 150,
+          "sold": 300
+        }
+      }
+    ],
+    "analytics": {
+      "visits": {
+        "today": 345,
+        "this_week": 2500,
+        "this_month": 12000
+      },
+      "sales": {
+        "today": 100,
+        "this_week": 750,
+        "this_month": 3200,
+        "top_products": ["Laptop", "Wireless Headphones"]
+      }
+    }
+  },
+  "meta": {
+    "server": {
+      "version": "1.0.0",
+      "host": "api.example.com"
+    },
+    "request": {
+      "method": "POST",
+      "endpoint": "/api/v1/get-data",
+      "parameters": {
+        "limit": 10,
+        "offset": 0,
+        "filters": {
+          "category": "electronics",
+          "price_range": {
+            "min": 100,
+            "max": 2000
+          }
+        }
+      }
+    }
+  }
+}
